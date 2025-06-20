@@ -12,6 +12,10 @@ const whispers = await getAll()
 res.render('about', { whispers })
 })
 
+app.get("/hello", (req, res) => {
+  res.render("hello");
+});
+
 app.get("/api/v1/whisper", async (req, res) => {
   const whispers = await getAll();
   res.json(whispers);
